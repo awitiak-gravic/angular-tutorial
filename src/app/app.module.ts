@@ -20,13 +20,18 @@ import { CartComponent } from './cart/cart.component';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
-      // {
-      //   path: 'cart',
-      //   loadChildren: () =>
-      //     import('./cart/cart.module').then((m) => m.CartModule),
-      // },
-      { path: 'cart', component: CartComponent },
+      {
+        path: 'cart',
+        loadChildren: () =>
+          import('./cart/cart.module').then((m) => m.CartModule),
+      },
+      //{ path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+      {
+        path: 'cart',
+        loadChildren: () =>
+          import('./cart/cart.module').then((m) => m.CartModule),
+      },
     ]),
   ],
   declarations: [
@@ -36,7 +41,7 @@ import { CartComponent } from './cart/cart.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     ShippingComponent,
-    CartComponent,
+    //CartComponent,
   ],
   bootstrap: [AppComponent],
 })
