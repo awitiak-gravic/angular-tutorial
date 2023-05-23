@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
+import { LoginService } from '../login.service';
+//import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.css']
+  styleUrls: ['./top-bar.component.css'],
 })
 export class TopBarComponent {
-
+  constructor(public loginService: LoginService) {}
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

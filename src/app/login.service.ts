@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
+  loggedIn: boolean = false;
 
-  constructor() { }
+  constructor() {}
+
+  toggleLogin() {
+    this.loggedIn = !this.loggedIn;
+  }
 }

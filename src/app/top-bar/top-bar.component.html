@@ -3,9 +3,23 @@
 </a>
 
 <div>
-  <a routerLink="/login" class="button fancy-button" style="margin-right: 10px"
+  <a
+    routerLink="/login"
+    class="button fancy-button"
+    style="margin-right: 10px"
+    *ngIf="!loginService.loggedIn"
+    (click)="loginService.toggleLogin()"
     ><em class="material-icons">account_box</em>Login</a
   >
+  <a
+    class="button fancy-button"
+    style="margin-right: 10px"
+    *ngIf="loginService.loggedIn"
+    routerLink=""
+    (click)="loginService.toggleLogin()"
+    ><em class="material-icons">account_box</em>Log Out</a
+  >
+  <!-- <app-login></app-login> -->
 
   <a routerLink="/cart" class="button fancy-button"
     ><em class="material-icons">shopping_cart</em>Checkout</a
