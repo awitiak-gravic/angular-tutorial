@@ -35,6 +35,11 @@ import { TopBarComponent } from './top-bar/top-bar.component';
         loadChildren: () =>
           import('./shipping/shipping.module').then((m) => m.ShippingModule),
       },
+      {
+        path: 'login',
+        loadChildren: () =>
+          import('./login/login.module').then((m) => m.LoginModule),
+      },
     ]),
   ],
   declarations: [AppComponent, TopBarComponent],
